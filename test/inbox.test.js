@@ -30,9 +30,9 @@ describe('Inbox', () =>{
     });
 
     it('can change the message', async () =>{
-        await inbox.methods.setMessage('Bye Hello').send({from: accounts[0]});
+        await inbox.methods.setMessage('Hi Natty').send({from: accounts[0]});
         const message = await inbox.methods.message().call();
-        assert.strictEqual(message, 'Bye Hello');
+        assert.strictEqual(message, 'Hi Natty');
 
     })
 });
